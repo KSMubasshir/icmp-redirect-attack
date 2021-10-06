@@ -68,12 +68,7 @@ Create four virtual machines(server,client,router,attacker) in vbox
 
 
 **Topology:**  
-
-				client---------neta-----------router-------------netb------------server
-						|		
-						|		
-						|		
-					     attacker
+![topology](images/topology.png)
 		     
 ## In Each vms:
 ````
@@ -209,10 +204,10 @@ python client.py
 
 Client will not connect to server.  
 It will send it's msg to attacker.  
-Use wireshark to capture these packets.  
+Use wireshark to capture these packets.   
 
-
-
+## Output in Wireshark
+![sniffing](images/sniffing.png)
 
 
 
